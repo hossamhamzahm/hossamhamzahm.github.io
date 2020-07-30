@@ -337,7 +337,6 @@ removeAll.addEventListener('click',() =>{
 
     for(let element of taskboxes){
         stack.push(element);
-        console.log(element);
         element.remove();
 
         // increment the tasksNum and assign the value of it to the tasks counter
