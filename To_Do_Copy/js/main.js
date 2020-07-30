@@ -262,7 +262,7 @@ plus.addEventListener('click', () =>{
         input.value = '';
 
         // focus on the input after the adding a new task
-        input.focus();
+        //input.focus();
     }
 });
 
