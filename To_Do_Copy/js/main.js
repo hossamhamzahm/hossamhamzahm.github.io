@@ -157,7 +157,9 @@ var plusIntro = true;
 
 
 //adding a new task
-plus.addEventListener('click', () =>{
+plus.addEventListener('click', add) 
+
+function add(){
     'use strict';
 
     // boolean variable indicating if the value is new or not
@@ -262,9 +264,9 @@ plus.addEventListener('click', () =>{
         input.value = '';
 
         // focus on the input after the adding a new task
-        //input.focus();
+        // input.focus();
     }
-});
+}
 
 
 // finished tasks
@@ -404,3 +406,15 @@ unFinishAll.addEventListener('click',() =>{
     }
 
 });
+
+
+
+// making a task by hitting input
+input.onkeydown = (e) =>{
+    'use strict';
+    // kep the pressed key in a variable
+    let key = e.key;
+
+    if(key === "Enter") add();
+
+};
