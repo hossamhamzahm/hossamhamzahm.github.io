@@ -12,7 +12,7 @@
     margin: 0;
 }
 
-::place-holder{
+input::place-holder{
     color:#ffffffd1;
 }
 
