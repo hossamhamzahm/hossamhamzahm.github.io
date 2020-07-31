@@ -12,6 +12,10 @@
     margin: 0;
 }
 
+::place-holder{
+    color:#ffffffd1;
+}
+
 .control-panel{
     display: flex;
     background-color: #00b894;
