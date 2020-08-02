@@ -14,7 +14,7 @@ test
     margin: 0;
 }
 
-input::place-holder{
+input::placeholder{
     color:#ffffffd1;
 }
 
