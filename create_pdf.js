@@ -9,13 +9,13 @@ let options = { format: 'A2' };
 
 // or //
 let file = { url: "http://127.0.0.1:5500/" };
-let ws = fs.createWriteStream("./Hossam_Hamza_Resume.pdf");
+let ws = fs.createWriteStream("./Hossam_Hamza_Resume_Lv.pdf");
 
 
 
 async function generate_pdf(){
     // ensure that this is the pdf_version branch 
-    await childProcess.execSync("git switch pdf_version", {stdio: 'inherit'})
+    await childProcess.execSync("git switch lv_pdf_version", {stdio: 'inherit'})
 
     html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
         ws.write(pdfBuffer);
