@@ -17,7 +17,7 @@ async function generate_pdf(){
     // ensure that this is the pdf_version branch 
     await childProcess.execSync("git switch pdf_version", {stdio: 'inherit'})
 
-    html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
+    await html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
         ws.write(pdfBuffer);
         ws.close()
         console.log("Done");
@@ -25,4 +25,13 @@ async function generate_pdf(){
 }
 
 
-generate_pdf();
+const init = async() => {
+    await generate_pdf();
+
+	file = { url: "http://127.0.0.1:5500/Hossam_Hamza_Resume_Lv.html" };
+	ws = fs.createWriteStream("./Hossam_Hamza_Resume_Lv.pdf");
+
+	await generate_pdf();
+}
+
+init();
