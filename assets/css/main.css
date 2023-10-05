@@ -1,0 +1,15 @@
+/* .resume-section-heading {
+    padding-left: 0 !important;
+    font-size: 1.75rem !important;
+} */
+
+.resume-section-heading:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    background: #54B689;
+    position: absolute;
+    left: 0;
+    top: 0
+}

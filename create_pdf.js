@@ -1,4 +1,4 @@
-var html_to_pdf = require('html-pdf-node');
+let html_to_pdf = require('html-pdf-node');
 const fs = require("fs");
 const childProcess = require("child_process");
 
@@ -15,7 +15,7 @@ let ws = fs.createWriteStream("./resume.pdf");
 
 async function generate_pdf(){
     // ensure that this is the pdf_version branch 
-    await childProcess.execSync("git switch pdf_version", {stdio: 'inherit'})
+    // await childProcess.execSync("git switch pdf_version", {stdio: 'inherit'})
 
     html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
         ws.write(pdfBuffer);

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hossamhamzahm/hossamhamzahm.github.io#readme",
   "dependencies": {
-    "html-pdf-node": "^1.0.8"
+    "html-pdf-node": "^1.0.8",
+    "pdf2html": "^3.1.0"
   }
 }
