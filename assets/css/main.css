@@ -1,7 +1,13 @@
-/* .resume-section-heading {
+/* 
+.resume-section-heading {
     padding-left: 0 !important;
     font-size: 1.75rem !important;
-} */
+} 
+
+.fss {
+    font-size: 1.25rem !important;
+}
+*/
 
 .resume-section-heading:before {
     content: "";
