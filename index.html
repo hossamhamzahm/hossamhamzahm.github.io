@@ -20,16 +20,21 @@
 
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
-	<link id="theme-style" rel="stylesheet" href="assets/css/main.css">
+	<!-- <link id="theme-style" rel="stylesheet" href="assets/css/main.css"> -->
+	<!-- <link id="theme-style" rel="stylesheet" href="assets/c	ss/main-pdf.css"> -->
 </head>
 
-<body>
+<script>
+	// 'pdf' or 'site'
+	let file_type = 'site'
+</script>
 
+<body>
 	<div class="fss main-wrapper ">
 		<!-- <div class="fss"> -->
-		<div class="fss container px-3 px-lg-5">
-			<!-- <article class="fss resume-wrapper mx-auto theme-bg-light p-5 pb-4 shadow-lg"> -->
-			<article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
+		<div id="main-div" class="fss">
+			<article id="main-article" class="fss resume-wrapper mx-auto theme-bg-light p-5 shadow-lg">
+			<!-- <article class="resume-wrapper mx-auto theme-bg-light p-5 my-5 shadow-lg"> -->
 				<div class="fss resume-header">
 					<div class="fss row align-items-center">
 						<div class="fss resume-title col-12 col-md-6 col-lg-8">
@@ -117,16 +122,14 @@
 											</strong>
 											<ul>
 												<li>
-													Designed database schema and migrations
+													Designed database schemas and migrations
 												</li>
 												<li>
-													Designed a RESTful API with authentication and authorization
+													Designed RESTful API with authentication & authorization
 												</li>
+
 												<li>
-													Dockerize the application in node-alpine image
-												</li>
-												<li>
-													Setup Circleci pipeline to automate testing and deployment of the API
+													Dockerized the application & setup Circleci pipeline to automate testing and deployment of the API
 												</li>
 											</ul>
 											<li class="fss me-2">
@@ -166,16 +169,14 @@
 
 											<ul>
 												<li>
-													Developed a responsive GUI to ease data filling following the MVC
-													architecture pattern
+													Responsive GUI to ease data filling following the MVC pattern
 												</li>
 
 												<li>
 													Send the email with the rendered body from the app
 												</li>
 												<li class="fss me-2">
-													<strong>Technologies used:</strong> HTML, CSS, JavaScript,
-													Bootstrap, Nodejs, Electron.js
+													<strong>Technologies used:</strong> HTML, CSS, Bootstrap, Nodejs, Electron.js
 												</li>
 											</ul>
 											</li>
@@ -183,23 +184,18 @@
 											<br>
 											<li>
 												<strong>
-													Extended a CLI version of the tool to be integrated with Jenkins to
-													automate new release e-mails notifications
+													Extended CLI version to automate new release e-mails by Jenkins
 												</strong>
 
 												<ul>
 													<li>
-														Added development and production loggers
+														Implemented development and production loggers
 													</li>
 													<li>
-														Made a list of flags to configure all the details of the email
-														body and the tool itself
+														Made a list of CLI flags to configure email body and format
 													</li>
 													<li>
-														<!-- <strong> -->
-														Added the CLI to an <strong>Alpine Docker container</strong> to
-														be deployed on the CI machine
-														<!-- </strong> -->
+														Setup <strong>Docker container</strong> to deploy the CLI to CI machine
 													</li>
 												</ul>
 											</li>
@@ -275,7 +271,7 @@
 											<div class="fss item-meta col-12 text-muted text-start  mt-1">
 												<a class="fss text-decoration-none" target="_blank"
 													href="https://www.nu.edu.eg"> Nile University </a> | Sep 2019 –
-												Present
+												Feb 2024
 											</div>
 										</div>
 
@@ -297,25 +293,25 @@
 								<div class="fss item">
 									<div class="fss item-heading row align-items-center mb-2">
 										<h4 class="fss item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
-											University Schedule-Generator
+											Identifying Egyptian Artifacts & Landmarks API
 											<a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
-												href="https://github.com/hossamhamzahm/University_Schedule_Generator">
+												href="https://github.com/hossamhamzahm/identifying-egyptian-artifacts-landmarks-api">
 												<i class="fss fab fa-github fa-fw fa-lg me-2"></i></a>
+											<!-- <a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
+												href="https://university-schedule-generator.vercel.app/"><i
+													class="fss fas fa-external-link-alt"></i></a> -->
 										</h4>
 										<div
 											class="fss item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
-											Open Source | Jan 2023</div>
+											Graduation Project | Jan 2024</div>
 
 									</div>
 									<div class="fss item-content">
 										<p class="fss mb-0">
-											This is an API written in Node & Express to generate all possible schedules for the specified courses using backtracking algorithm.
+											An API utilizing Siamese Network Architecture (SNN) with Knowledge Transfer (KT) to identify Egyptian
+											monuments/Landmarks and provide relevant information to enhance tourists' experience and support spreading the rich cultural heritage of Egypt.
 											<br>
-											<strong>Technologies used:</strong> TypeScript, Node, Express, Mysql, AWS (RDS, S3, Elastic Beanstalk), Docker, Circleci, MVC Architecture
-										</p>
-										<p>
-											<a class="fss link-drak rm-pdf text-muted" target="_blank"
-												href="https://github.com/hossamhamzahm/TimeTable-Maker" ><strong>Python implementation of the algorithm</strong> </a>
+											<strong>Technologies used:</strong> Python, Pytorch, Flask, PostgreSQL, AWS (EC2), Docker, Circleci
 										</p>
 									</div>
 								</div>
@@ -326,9 +322,37 @@
 						</div>
 						<!--//resume-main-->
 						<aside class="fss resume-aside col-12 col-lg-5 px-lg-4 pb-lg-4 position-relative">
-
-
 							<section class="fss project-section py-3">
+
+								<div class="fss item mb-3">
+									<div class="fss item-heading row align-items-center mb-2">
+										<h4 class="fss item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+											University Schedule Generator
+								
+											<a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
+												href="https://github.com/hossamhamzahm/University-Schedule-Generator">
+												<i class="fss fab fa-github fa-fw fa-lg me-2  mt-2"></i></a>
+											<a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
+												href="https://university-schedule-generator.vercel.app/">
+												<i class="fss fas fa-external-link-alt"></i></a>
+										</h4>
+										<div class="fss item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
+											Open Source | Jan 2024 </div>
+								
+									</div>
+									<div class="fss item-content">
+										<p>
+											This is an API written in Node & Express to generate all possible schedules for the specified courses using
+											backtracking algorithm with its frontent written in React.
+											<br>
+											<strong>Technologies used:</strong> TypeScript, Node, Express, Mysql, AWS (EC2), Docker, Circleci, HTML,
+											CSS, Bootstrap, React, Vercel
+											<a class="fss link-drak rm-pdf text-muted" target="_blank"
+												href="https://github.com/hossamhamzahm/TimeTable-Maker"><strong>Python implementation of the
+											algorithm </strong> </a>
+										</p>
+									</div>
+								</div>
 
 								<div class="fss item mb-3">
 									<div class="fss item-heading row align-items-center mb-2">
@@ -336,8 +360,10 @@
 											Smart Home
 								
 											<a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
-												href="https://github.com/hossamhamzahm/smart_home">
-												<i class="fss fab fa-github fa-fw fa-lg me-2  mt-2"></i></a>
+												href="https://github.com/hossamhamzahm/smart-home-spring-api">
+												<i class="fss fab fa-github fa-fw fa-lg me-2  mt-2"></i></a><a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
+													href="https://hossamhamzahm.github.io/Smart-Home-React/">
+													<i class="fss fas fa-external-link-alt"></i></a>
 										</h4>
 										<div class="fss item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
 											Open Source |
@@ -347,17 +373,16 @@
 									<div class="fss item-content">
 										<p>
 											A full-stack web app that gives full control of all home lights, outlets,
-											and appliances from any device connected
-											to the internet.
+											and appliances from any device connected to the internet.
 											<br>
 											<strong>Technologies used:</strong> HTML, CSS, JavaScript, Bootstrap,
-											Node.js, Express,
-											Mongo, Raspberry Pi, Python, Raspbian OS, SSH, and Fritzing.
+											Java, Spring Boot,
+											PostgreSQL, Raspberry Pi, Python, Fritzing.
 										</p>
 									</div>
 								</div>
 
-								<div class="fss item mb-3">
+								<!-- <div class="fss item mb-3">
 									<div class="fss item-heading row align-items-center mb-2">
 										<h4 class="fss item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
 											Course Registration System
@@ -381,11 +406,11 @@
 											sorted in order.
 										</p>
 									</div>
-								</div>
+								</div> -->
 
 							</section>
+							
 							<!--//project-section-->
-
 							<section class="fss skills-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Technical Skills</h3>
 								<div class="fss item">
@@ -403,12 +428,12 @@
 
 									<h4 class="fss item-title">Electronics</h4>
 									<ul class="fss list-unstyled resume-skills-list">
-										<li class="fss mb-2">Cadence, Proteus, Node-MCU, Raspberry Pi, Arduino, Verilog</li>
+										<li class="fss mb-2">Cadence, Proteus, Node-MCU, Raspberry Pi, Arduino</li>
 									</ul>
 
 									<h4 class="fss item-title">Web Technologies</h4>
 									<ul class="fss list-unstyled resume-skills-list">
-										<li class="fss mb-2">HTML, CSS, JS, Bootstrap, Node.js, Express, TypeScript, Mongo, SQL, Docker, Nginx, Postman, Electron</li>
+										<li class="fss mb-2">HTML, CSS, JS, Bootstrap, Node.js, Express, TypeScript, React, Spring Boot, Mongo, SQL, Docker, Postman</li>
 									</ul>
 
 									<h4 class="fss item-title">Version Control</h4>
@@ -427,10 +452,12 @@
 								<ul style="font-size: 0.9rem;">
 									
 									<li class="fss">
-										Participated in ACPC (Africa and Arab Collegiate Programming Championship) 2022
+										Qualified to ACPC (Africa and Arab Collegiate Programming Championship)
 										<small>
 											<br>
-											<span class="text-muted">Ranked 63rd among Africa and Arab teams</span>
+											<span class="text-muted">2024 - To be held this year</span>
+											<br>
+											<span class="text-muted">2022 -Ranked 63rd among Africa and Arab teams</span>
 										</small>
 										<!-- <a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
 											href="https://drive.google.com/file/d/1Iwb_Hy1p9_7ShzSgn1jYVRvii7n-JIDr/view?usp=sharing"><i
@@ -441,12 +468,11 @@
 										Participated in ECPC (Egyptian Collegiate Programming Championship)
 										<small>
 											<br>
-											<span class="text-muted">2022 - Second place among Nile university
+											<span class="text-muted">2023 - Second place among Nile university
 												teams</span>
 											<br>
-											<span class="text-muted">2021 - Third place among Nile university
+											<span class="text-muted">2022 - Second place among Nile university
 												teams</span>
-
 										</small>
 										<!-- <a class="fss text-decoration-none link-drak rm-pdf" target="_blank"
 											href="https://drive.google.com/file/d/1Iwb_Hy1p9_7ShzSgn1jYVRvii7n-JIDr/view?usp=sharing"><i
@@ -485,23 +511,23 @@
 
 							<section class="fss skills-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Languages</h3>
-								<ul class="fss list-unstyled resume-lang-list">
-									<li class="fss mb-2">Arabic <span class="fss text-muted">(Native)</span></li>
-									<li>English <span class="fss text-muted">(Professional)</span></li>
+								<ul class="fss list-unstyled resume-lang-list mb-1">
+									<li class="fss mb-2 d-inline-block">Arabic <span class="fss text-muted">(Native)</span></li>
+									<li class="fss mb-2 d-inline-block float-end">English <span class="fss text-muted">(Professional)</span></li>
 								</ul>
 							</section>
 							<!--//certificates-section-->
 
-							<p class="fss text-center position-absolute bottom-0">Click 
-								<a class="fss text-decoration-none" href="https://github.com/hossamhamzahm/hossamhamzahm.github.io/raw/main/resume.pdf" download>here</a> 
+							<p class="fss text-center position-absolute bottom-0 hide-online">Click 
+								<a class="fss text-decoration-none" href="https://github.com/hossamhamzahm/hossamhamzahm.github.io/raw/main/Hossam_Hamza_Resume.pdf" download>here</a> 
 								for pdf version of the resume 
 							</p>
 
-							<!-- <p class="text-center position-absolute bottom-0">Click
+							<p class="text-center position-absolute bottom-0 hide-pdf">Click
 								<a class="text-decoration-none" href="https://hossamhamzahm.github.io/" 
 								download>here</a>
 								for online version of the resume
-							</p> -->
+							</p>
 						</aside>
 						<!--//resume-aside-->
 					</div>
@@ -520,4 +546,35 @@
 
 </body>
 
+<script>
+	let site = 'main.css'
+	let pdf = 'main-pdf.css'
+
+	function addCss(fileName) {
+		var head = document.head;
+		var link = document.createElement("link");
+
+		link.type = "text/css";
+		link.rel = "stylesheet";
+		link.href = fileName;
+
+		head.appendChild(link);
+	}
+
+	let main_article = document.getElementById('main-article')
+	let main_div = document.getElementById('main-div')
+
+	if(file_type == 'pdf'){
+		main_article.classList.add("pb-4")
+		addCss(`assets/css/${pdf}`); 
+	}
+	else {
+		main_article.classList.add("my-5")
+		main_div.classList.add("container")
+		main_div.classList.add("px-3")
+		main_div.classList.add("px-lg-5")
+		addCss(`assets/css/${site}`);
+	}
+
+</script>
 </html>
